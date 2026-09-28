@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard | CEC Student Portal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="../../css/student-dashboard.css">
+</head>
+<body class="dashboard-page">
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <img src="../../../images/cec-logo.png" alt="Cebu Eastern College logo">
+            <strong>CEC</strong>
+            <span>STUDENT PORTAL</span>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Student navigation">
+            <a href="#" class="active"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+            <a href="../records/student-profile.html"><i class="fa-regular fa-user"></i><span>My Profile</span></a>
+            <a href="../records/enrollment.html"><i class="fa-regular fa-file-lines"></i><span>Enrollment</span></a>
+            <a href="../grades/grades.html"><i class="fa-solid fa-chart-simple"></i><span>Grades</span></a>
+            <a href="../records/financial.html"><i class="fa-regular fa-credit-card"></i><span>Financial</span></a>
+            <a href="../classes/class-schedule.html"><i class="fa-regular fa-calendar"></i><span>Class Schedule</span></a>
+            <a href="../records/documents.html"><i class="fa-regular fa-file-lines"></i><span>Documents</span></a>
+            <a href="../announcements/announcements.html"><i class="fa-solid fa-volume-high"></i><span>Announcement</span></a>
+            <a href="../classes/curriculum.html"><i class="fa-solid fa-pen-ruler"></i><span>Curriculum</span></a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="#"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+            <a href="../auth/student.html"><i class="fa-solid fa-arrow-right-from-bracket"></i><span>Logout</span></a>
+        </div>
+    </aside>
+
+    <main class="dashboard-main">
+        <header class="dashboard-header">
+            <div class="search-box">
+                <input type="search" placeholder="Search" aria-label="Search dashboard">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <button class="header-icon" type="button" aria-label="Notifications"><i class="fa-regular fa-bell"></i></button>
+            <button class="profile-button" type="button" aria-label="Open profile menu">
+                <span class="profile-icon"><i class="fa-regular fa-user"></i></span>
+                <i class="fa-solid fa-chevron-down"></i>
+            </button>
+        </header>
+
+        <section class="dashboard-content">
+            <div class="welcome-row">
+                <div>
+                    <p class="welcome-label">Welcome back,</p>
+                    <h1></h1>
+                    <p class="student-course"><span></span></p>
+                </div>
+                <div class="building-preview" aria-hidden="true"></div>
+            </div>
+
+            <section class="stats-grid" aria-label="Student summary">
+                <article class="stat-card">
+                    <div><p>GPA (Current)</p><strong></strong><small class="good"></small></div>
+                    <i class="fa-solid fa-chart-simple"></i>
+                </article>
+                <article class="stat-card">
+                    <div><p>Account Balance</p><strong></strong><small class="due"></small></div>
+                    <i class="fa-regular fa-credit-card"></i>
+                </article>
+                <article class="stat-card">
+                    <div><p>Enrolled Units</p><strong></strong><small></small></div>
+                    <i class="fa-regular fa-book-open"></i>
+                </article>
+                <article class="stat-card">
+                    <div><p>Unread Announcement</p><strong></strong><small></small></div>
+                    <i class="fa-regular fa-clipboard"></i>
+                </article>
+            </section>
+
+            <section class="dashboard-panels">
+                <article class="dashboard-panel schedule-panel">
+                    <div class="panel-heading">
+                        <h2><i class="fa-regular fa-calendar"></i> Weekly Schedule</h2>
+                        <a href="../classes/class-schedule.html">View Full Schedule</a>
+                    </div>
+                    <div class="schedule-table-wrap">
+                        <table class="schedule-table">
+                            <thead><tr><th>Time</th><th>Monday</th><th>Tuesday</th><th>Wednesday</th><th>Thursday</th><th>Saturday</th></tr></thead>
+                            <tbody>
+                                <tr><th>7:00 - 8:30 AM</th><td></td><td></td><td></td><td></td><td></td></tr>
+                                <tr><th>8:30 - 10:00 AM</th><td></td><td></td><td></td><td></td><td></td></tr>
+                                <tr><th>10:00 - 11:30 AM</th><td></td><td></td><td></td><td></td><td></td></tr>
+                                <tr><th>11:30 - 1:00 PM</th><td></td><td></td><td></td><td></td><td></td></tr>
+                                <tr><th>1:00 - 2:30 PM</th><td></td><td></td><td></td><td></td><td></td></tr>
+                                <tr><th>2:30 - 4:00 PM</th><td></td><td></td><td></td><td></td><td></td></tr>
+                                <tr><th>4:00 - 5:30 PM</th><td></td><td></td><td></td><td></td><td></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </article>
+
+                <article class="dashboard-panel announcement-panel">
+                    <div class="panel-heading">
+                        <h2><i class="fa-regular fa-clipboard"></i> Announcement</h2>
+                        <a href="../announcements/announcements.html">View all <span>→</span></a>
+                    </div>
+                    <div class="announcement-list">
+                        <a href="#"><strong></strong><small></small><b></b></a>
+                        <a href="#"><strong></strong><small></small><b></b></a>
+                        <a href="#"><strong></strong><small></small><b></b></a>
+                    </div>
+                </article>
+            </section>
+        </section>
+    </main>
+<script src="../../js/showToast.js"></script>
+<script src="../../js/copyToClipboard.js"></script>
+<script src="../../js/confirmAction.js"></script>
+<script src="../../js/avatarUpload.js"></script>
+<script src="../../js/validateForm.js"></script>
+<script src="../../js/persistSelect.js"></script>
+<script src="../../js/setYear.js"></script>
+<script src="../../js/student-dashboard.js"></script>
+</body>
+</html>
